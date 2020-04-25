@@ -7,8 +7,8 @@ var date1=date.toLocaleString();
 var div1 =document.getElementById("time");
 if(p<=10)
 {
-    q="上午"
-        div1.innerHTML = q+"好!"+"今天是"+date1;
+    q="上午";
+    div1.innerHTML = q+"好!"+"今天是"+date1;
 }
 else if(p<=14)
 {

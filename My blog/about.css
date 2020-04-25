@@ -1,0 +1,220 @@
+@charset "UTF-8";
+*{
+		margin:0px;
+		padding:0px;
+	}
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	ul,ol{list-style:none;}
+	a{text-decoration:none;}
+	img{
+		border-radius:7px;
+		-webkit-transition: transform 0.3s linear;
+        -moz-transition: transform 0.3s linear;
+        -ms-transition: transform 0.3s linear;
+        -o-transition: transform 0.3s linear;
+        transition: transform 0.3s linear;
+	}
+	img:hover{
+		-webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.1);
+			box-shadow:0px 11px 9px #1b21237d;
+	}
+	@font-face{
+		font-family:繁体;
+		src:url(字体/方正硬笔行书繁体.ttf);
+		}
+	#nav{
+		width:100%;
+		height:65px;
+		min-width:1080px;
+		margin:auto;
+		padding:10px 0;
+		background-color:#333;
+		position:fixed;
+		top:0;
+		z-index:100;
+	}
+	#logo{
+	    float:left;
+		font-size:30px;
+		margin-left:100px;
+		line-height:65px;
+	}
+	a{
+		color:#fff;
+	}
+	#logo a span{
+		font-size:50px;
+		font-weight:bold;
+	}
+	.top-nav{
+		margin-right:40px;
+		float:right;
+	}
+	
+	.top-nav li{
+		float:left;
+		display:block;
+		padding:0 0 0 40px;
+		font-size:18px;
+		color:#ccc;
+		line-height:65px;
+		text-align:center;
+	}
+	a:hover{
+		color:#ff6666;
+	}
+	/*关于我的主体部分*/
+	.info{
+		position:relative;
+		width:1943px;
+		top:85px;
+		margin:auto;
+		background-color:skyblue;
+		padding:20px;
+	}
+	.head{
+		height:18%;
+	}
+	.h-img{
+		display:inline-block;
+		vertical-align:middle;
+		margin-left:40px;
+		border:4px solid #ccc;
+		border-radius:50%;
+		overflow:hidden;
+	}
+	.h-img img{
+		display:inline-block;
+		height:420px;
+		border-radius:50%;
+		-webkit-transition: transform 0.3s linear;
+        -moz-transition: transform 0.3s linear;
+        -ms-transition: transform 0.3s linear;
+        -o-transition: transform 0.3s linear;
+        transition: transform 0.3s linear;
+	}
+	.h-img:hover{
+		border-color:orange;
+	}
+	.h-img:hover img{
+		-webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.1);
+	}
+	.h-p{
+		display:inline-block;
+		vertical-align:middle;
+		width:719px;
+		height:566px;
+		margin-left:280px;
+		padding:0 20px;
+		background-color:#c4e2e2;
+		border-radius:5px;
+	}
+	.h-p .hello{
+			width:140px;
+			height:100px;
+			background:url("images/hello.jpg") no-repeat -30px -40px/180px;
+	}
+	.h-p h3{
+		font-size:30px;
+		font-family:"繁体";
+		text-align:center;
+		text-decoration:underline;
+	}
+	.h-p p{
+		font-size:28px;
+		background-color:#ccc;
+		line-height:50px;
+		margin:20px 0;
+		border-radius:10px;
+		
+	}
+	.ser{
+		width:200px;
+		margin:0 auto;
+		margin-top:100px;
+		box-shadow:9px 6px 12px #1b586f7d;
+	}
+	.ser h2{
+		font-size:48px;
+		vertical-align:top;
+	}
+	.ser span{
+		display:inline-block;
+		margin-left:5px;
+		font-size:30px;
+	}
+	/*介绍*/
+	.content{
+		width:1080px;
+		height:1080px;
+		margin:10px auto;
+		padding:20px 40px;
+		/* border:1px solid red; */
+	}
+	.content li{
+		height:320px;
+		/* border:1px solid red; */
+	}
+	.li-img{
+		display:inline-block;
+	}
+	.li-img img{
+		width:420px;
+		vertical-align:middle;
+	}
+	.li-info{
+		display:inline-block;
+		width:500px;
+		height:300px;
+		margin-left:50px;
+		padding:10px;
+		vertical-align:top;
+	}
+	.li-info h4{
+		line-height:40px;
+		text-align:center;
+	}
+	.li-info .like{
+		display:inline-block;
+		width:30px;
+		height:30px;
+		vertical-align:middle;
+		background:url("images/tip.jpg") no-repeat -310px -42px/453px;
+	}
+	.li-info .talk{
+		display:inline-block;
+		width:30px;
+		height:30px;
+		background:url("images/tip.jpg") no-repeat -141px 2px/453px;
+	}
+	.li-info span{
+		margin-right:10px;
+		color:#ff0099;
+	}
+	.li-info .footer{
+		text-align:right;
+		padding:20px 0;
+	}
+	.li-info .like:hover{
+		cursor:pointer;
+	}
+	.li-info .talk:hover{
+		cursor:pointer;
+	}
+	.list{
+		margin-bottom:10px;
+	}
+	.list:hover{
+		color:#cc33cc;
+	}

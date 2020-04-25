@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#mnav{width:100%;margin:auto;background-color:#333;}
+#logo{background-color:#333;}
+	body{
+		background-color:#eee;
+	}
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	ul,ol{list-style:none;}
+	a{text-decoration:none;}
+	@font-face{
+		font-family:繁体;
+		src:url(字体/方正硬笔行书繁体.ttf);
+		}
+	#nav{
+		width:100%;
+		height:65px;
+		min-width:1080px;
+		margin:auto;
+		padding:10px 0;
+		background-color:#333;
+		position:fixed;
+		top:0;
+		z-index:100;
+	}
+	#logo{
+	    float:left;
+		font-size:30px;
+		margin-left:100px;
+		line-height:65px;
+	}
+	a{
+		color:#fff;
+	}
+	#logo a span{
+		font-size:50px;
+		font-weight:bold;
+	}
+	.top-nav{
+		margin-right:40px;
+		float:right;
+	}
+	
+	.top-nav li{
+		float:left;
+		display:block;
+		padding:0 0 0 40px;
+		font-size:18px;
+		color:#ccc;
+		line-height:65px;
+		text-align:center;
+	}
+	a:hover{
+		color:#ff6666;
+	}
+
+	.login{
+		width:500px;
+		height:300px;
+		margin:100px auto;
+		font-family:"繁体";
+		font-size:20px;
+		border:1px solid #ccc;
+		border-radius:8px;
+		background:url("images/7.jpg")
+	}
+	.line{
+		margin:20px auto;
+		width:200px;
+	}
+	.line .input{
+		width:100px;
+		height:25px;
+		border:1px solid #fde1f8;
+		border-radius:3px;
+		padding-left:3px;
+	}
+	.line .res{
+		width:50px;
+		height:20px;
+		border-radius:3px;
+		color:black;
+		background-color:#6699ff2;
+		float:left:
+		border:0;
+	}
+	.line .sub{
+		width:50px;
+		height:20px;
+		border-radius:3px;
+		color:black;
+		background-color:#6699ff2;
+		float:right:
+		border:0;
+	}
+	.line a{
+		width:60px;
+		height:60px;
+		display:inline-block;
+	}
+  </style>
+ </head>
+ <body>
+ 	<!-- >导航栏< -->
+	<div id="nav">
+		<div id="logo">
+				<a href="/"><span>Y</span>uan yongjie-个人博客</a>
+			</div>
+		<ul class="top-nav">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="about.html">关于我</a></li>
+			<li><a href="liuyan.html">留言</a></li>
+		</ul>
+	</div>
+	<div class="login">
+		<form action="">
+			<div class="line">
+				<span>账号:</span>
+				<input type="text" class="input" />
+			</div>
+			<div class="line">
+				<span>密码:</span>
+				<input type="password" class="input" />
+			</div>
+			<div class="line">
+				<input type="reset" class="res" />
+				<a href="liuyan.html"><input type="submit" class="sub" /></a>
+			</div>
+		</form>
+	</div>
+ </body>
+</html>

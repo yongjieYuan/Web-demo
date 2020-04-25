@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	#mnav{width:100%;margin:auto;background-color:#333;}
+#logo{background-color:#333;}
+	body{
+		background-color:#cbf7fc;
+	}
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	ul,ol{list-style:none;}
+	a{text-decoration:none;}
+	@font-face{
+		font-family:繁体;
+		src:url(字体/方正硬笔行书繁体.ttf);
+		}
+	#nav{
+		width:100%;
+		height:65px;
+		min-width:1080px;
+		margin:auto;
+		padding:10px 0;
+		background-color:#333;
+		position:fixed;
+		top:0;
+		z-index:100;
+	}
+	#logo{
+	    float:left;
+		font-size:30px;
+		margin-left:100px;
+		line-height:65px;
+	}
+	a{
+		color:#fff;
+	}
+	#logo a span{
+		font-size:50px;
+		font-weight:bold;
+	}
+	.top-nav{
+		margin-right:40px;
+		float:right;
+	}
+	
+	.top-nav li{
+		float:left;
+		display:block;
+		padding:0 0 0 40px;
+		font-size:18px;
+		color:#ccc;
+		line-height:65px;
+		text-align:center;
+	}
+	a:hover{
+		color:#ff6666;
+	}
+	/*标题*/
+	h2{
+		margin-top:100px;
+		font-family:"繁体";
+		text-align:center;
+	}
+	.container{
+		width:800px;
+		height:400px;
+		margin:20px auto;
+		padding:0 50px;
+		border:4px solid #aaa;
+		border-radius:8px;
+	}
+	.text p{
+		margin:20px auto;
+
+	}
+	.text .sub{
+		float:right;
+		text-align:right;
+	}
+  </style>
+ </head>
+ <body>
+	<!-- >导航栏< -->
+	<div id="nav">
+		<div id="logo">
+				<a href="/"><span>Y</span>uan yongjie-个人博客</a>
+			</div>
+		<ul class="top-nav">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="about.html">关于我</a></li>
+			<li><a href="#">留言</a></li>
+		</ul>
+	</div>
+	<h2>留 言</h2>
+	<div class="container">
+		<form action="" class="text">
+			<p><textarea cols="110" rows="10" wrap="soft">请留言...</textarea></p>
+			<p><input type="submit" name="button" class= "sub"value="提交"></p>
+		</form>
+	</div>
+ </body>
+</html>

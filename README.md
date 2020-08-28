@@ -8,4 +8,4 @@ MyBlog是我的第一个较为完整的个人博客页面，是第一次尝试�
 MyBlog的[首页](https://yongjieyuan.github.io/Web-demo/My%20blog/index.html)
 ## toDoList:
 这个就是仿照toDoList做的，也是自己边查资料，遇到不会的还是有看别人做的……这个有个思路就好做，不难，但自己菜做了有点久……：  
-yyj版的[toDoList](https://yongjieyuan.github.io/Web-demo/toDolist/index.html)
+yyj版的[toDoList](https://yongjieyuan.github.io/Web-demo/ToDolist/index.html)

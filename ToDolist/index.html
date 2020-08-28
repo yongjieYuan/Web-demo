@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./Fonts/iconfont.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <section>
+            <form action="">
+                <label for="title">ToDolist</label>
+                <input type="text" id="title" name="title" placeholder="添加ToDolist" required="required">
+            </form>
+        </section>
+    </header>
+    <section>
+        <h2>正在进行<span id="todocount">0</span></h2>
+        <ol id="todolist" class="demo-box"></ol>
+        <h2>已经完成<span id="donecount">0</span></h2>
+        <ul id="donelist">
+        </ul>
+    </section>
+    <footer>
+        Copyright © 2020 yyj.cn
+        <a href="javascript:;" id="clear">clear</a>
+    </footer>
+    <div id="tip" class="animate__animated animate__fadeOutDown">
+        <p>空空如也</p>
+    </div>
+</body>
+<script src="./jQuery.min.js"></script>
+<script src="./main.js"></script>
+
+</html>

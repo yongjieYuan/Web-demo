@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*原图*/
+    
+    .wrap {
+        position: relative;
+        width: 360px;
+        height: 360px;
+        margin: 100px 0 0 400px;
+        background-image: url(../images/1.jpg);
+        background-size: cover;
+    }
+    /*放大后显示的区域*/
+    
+    .pzoom {
+        position: absolute;
+        display: none;
+        overflow: hidden;
+        left: 800px;
+        top: 100px;
+        width: 540px;
+        height: 540px;
+        border: 1px solid #ccc;
+    }
+    
+    .pzoom img {
+        position: absolute;
+        width: 720px;
+        height: 720px;
+    }
+    /*放大镜*/
+    
+    .loupe {
+        position: absolute;
+        display: none;
+        width: 270px;
+        height: 270px;
+        background-color: #fede4f;
+        opacity: .5;
+        cursor: move;
+        z-index: 999;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="loupe"></div>
+    </div>
+    <div class="pzoom">
+        <img src="../images/1.jpg" alt="" class="bigImg">
+    </div>
+
+</body>
+<script>
+    window.onload = function() {
+            var oWrap = document.querySelector(".wrap");
+            var pzoom = document.querySelector(".pzoom");
+            var Ol = document.querySelector(".loupe");
+            var bigImg = document.querySelector(".bigImg");
+            //获取wrap的距离父级的top
+            var t = oWrap.offsetTop;
+            //获取wrap的距离父级的left
+            var l = oWrap.offsetLeft;
+            //鼠标移入后显示黄色方块区域
+
+            oWrap.addEventListener("mouseenter", function() {
+                Ol.style.display = "block";
+                pzoom.style.display = "block";
+            });
+            //移出鼠标删除放大镜（黄色区域）节点
+            oWrap.addEventListener("mouseleave", function() {
+                Ol.style.display = "none";
+                pzoom.style.display = "none";
+            });
+            oWrap.addEventListener("mousemove", function(e) {
+                e = e || window.event;
+                var OlX = (e.pageX - l - Ol.offsetWidth / 2);
+                var OlY = (e.pageY - t - Ol.offsetHeight / 2);
+                if (OlX < 0) {
+                    OlX = 0;
+                } else if (OlX > (this.offsetWidth - Ol.offsetWidth)) {
+                    OlX = (this.offsetWidth - Ol.offsetWidth);
+                }
+                if (OlY < 0) {
+                    OlY = 0;
+                } else if (OlY > (this.offsetHeight - Ol.offsetHeight)) {
+                    OlY = (this.offsetHeight - Ol.offsetHeight);
+                }
+                //放大镜移动
+                Ol.style.left = OlX + "px";
+                Ol.style.top = OlY + "px";
+
+                //原图片最大的移动距离
+                var maxX = this.offsetWidth - Ol.offsetWidth;
+                //大图片移动的最大距离
+                console.log(bigImg.offsetWidth);
+                var bigMax = bigImg.offsetWidth - pzoom.offsetWidth;
+                var bigX = OlX * bigMax / maxX;
+                var bigY = OlY * bigMax / maxX;
+                bigImg.style.left = -bigX + "px";
+                bigImg.style.top = -bigY + "px";
+            });
+        }
+        //这代码写的跟shit一样，练练手吧，哎~
+</script>
+
+</html>

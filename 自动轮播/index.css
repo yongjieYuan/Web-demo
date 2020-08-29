@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+#box {
+    overflow: hidden;
+    position: relative;
+    margin: 100px auto;
+    width: 500px;
+}
+img {
+    width: 500px;    
+}
+ul {
+   font-size: 0;
+   overflow: hidden;
+}
+li {
+    float: left;
+}
+.pics {
+    width: 3500px;
+    margin-left: -500px;
+}
+#tab {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    z-index: 5;
+}
+#tab li {
+    width: 8px;
+    height: 8px;
+    margin-right: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/*小圆点被选中时的颜色*/
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    font-size: 32px;
+    color: antiquewhite;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgba(150, 150, 150, .5);
+    cursor: pointer;
+}
+#next {
+    right: 0;
+}

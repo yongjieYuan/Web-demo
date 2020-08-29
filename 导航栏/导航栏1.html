@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery.min.js"></script>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        ul {
+            position: relative;
+            width: 560px;
+            margin: 200px auto;
+            border: 1px solid #444444;
+            list-style: none;
+            padding: 0;
+        }
+        
+        ul>li {
+            float: left;
+            line-height: 50px;
+            text-align: center;
+            margin-left: 20px;
+            padding: 0 10px;
+            color: black;
+            cursor: pointer;
+        }
+        
+        ul>li:hover {
+            color: darkgray;
+        }
+        
+        .show {
+            position: absolute;
+            display: none;
+            top: 50px;
+            left: 0;
+            width: 562px;
+            height: 350px;
+            background-color: rgb(214, 218, 222);
+            color: black;
+            z-index: 99;
+        }
+        
+        .selected {
+            background-color: #d34242;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="clearfix">
+        <li>商品介绍
+            <div class="show">商品介绍</div>
+        </li>
+        <li>规格与包装
+            <div class="show">规格与包装</div>
+        </li>
+        <li>售后保障
+            <div class="show">售后保障</div>
+        </li>
+        <li>商品评价
+            <div class="show">商品评价</li>
+        </li>
+        <li>手机社区
+            <div class="show">手机社区</div>
+        </li>
+    </ul>
+</body>
+<script>
+    document.onselectstart = function() {
+        return false
+    };
+    $("li:eq(0) .show").css("display", "block");
+    $("li:eq(0)").addClass("selected");
+    $('li').click(function() {
+        $(this).siblings().removeClass("selected").children("div").hide();
+        $(this).addClass("selected").children("div").show();
+    });
+</script>
+
+</html>

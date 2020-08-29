@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 2000px;
+            perspective-origin: center -100px;
+        }
+        
+        section {
+            position: relative;
+            width: 500px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            animation: rotate linear 20s infinite;
+        }
+        
+        section:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+        
+        section div {
+            position: absolute;
+            width: 100%;
+            height: 281.25px;
+            background-size: cover;
+        }
+        
+        section div:nth-child(1) {
+            background-image: url("./images/15.jpeg");
+            transform: translateZ(500px);
+        }
+        
+        section div:nth-child(2) {
+            background-image: url("./images/16.jpg");
+            transform: rotateY(60deg) translateZ(500px);
+        }
+        
+        section div:nth-child(3) {
+            background-image: url("./images/17.jpg");
+            transform: rotateY(120deg) translateZ(500px);
+        }
+        
+        section div:nth-child(4) {
+            background-image: url("./images/18.jpg");
+            transform: rotateY(180deg) translateZ(500px);
+        }
+        
+        section div:nth-child(5) {
+            background-image: url("./images/19.jpg");
+            transform: rotateY(240deg) translateZ(500px);
+        }
+        
+        section div:nth-child(6) {
+            background-image: url("./images/20.jpg");
+            transform: rotateY(300deg) translateZ(500px);
+        }
+        
+        section {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 500px;
+            height: 281.25px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+        
+        img {
+            position: absolute;
+            display: block;
+            width: 500px;
+        }
+        
+        .box img:first-child {
+            z-index: 1;
+        }
+        
+        .box img:last-of-type {
+            transform: rotateY(180deg);
+        }
+        
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./images/2.jpg" alt="">
+        <img src="./images/1.jpg" alt="">
+    </div>
+</body>
+
+</html>

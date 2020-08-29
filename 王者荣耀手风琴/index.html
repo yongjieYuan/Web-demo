@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        display: block;
+        text-decoration: none;
+    }
+    
+    img {
+        display: block;
+        height: 69px;
+    }
+    
+    .wrap {
+        width: 800px;
+        height: 69px;
+        margin: 100px auto;
+        padding: 5px;
+        background-color: rgb(7, 75, 92);
+    }
+    
+    ul {
+        list-style: none;
+        height: 100%;
+    }
+    
+    li {
+        float: left;
+        width: 69px;
+        height: 69px;
+        margin-right: 10px;
+    }
+    
+    a img:first-child {
+        position: absolute;
+    }
+    
+    a img:last-child {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="wrap data">
+        <ul class="pic">
+            <li>
+                <a href="javascript:;"><img src="./images/1.jpg" alt="" class="small"><img src="./images/1-freehover.png" alt="" class="big"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./images/2.jpg" alt="" class="small"><img src="./images/2-freehover.png" alt="" class="big"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./images/3.jpg" alt="" class="small"><img src="./images/3-freehover.png" alt="" class="big"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./images/4.jpg" alt="" class="small"><img src="./images/4-freehover.png" alt="" class="big"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./images/5.jpg" alt="" class="small"><img src="./images/5-freehover.png" alt="" class="big"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./images/6.jpg" alt="" class="small"><img src="./images/6-freehover.png" alt="" class="big"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./images/7.jpg" alt="" class="small"><img src="./images/7-freehover.png" alt="" class="big"></a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(function() {
+        $("li").mouseenter(function() {
+            $(this).stop().animate({
+                width: 224
+            }, 200).find(".small").stop().fadeOut().siblings().stop().fadeIn();
+            $(this).siblings().stop().animate({
+                width: 69
+            }, 200).find(".small").stop().fadeIn().siblings().stop().fadeOut();
+        });
+    });
+</script>
+
+</html>

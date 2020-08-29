@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 500px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+        }
+        
+        div {
+            position: absolute;
+            display: block;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 32px;
+        }
+        
+        .box div:first-child {
+            color: black;
+            background-color: pink;
+            z-index: 1;
+        }
+        
+        .box div:last-child {
+            color: white;
+            background-color: black;
+            transform: rotateY(180deg);
+        }
+        
+        .box:hover {
+            transform: rotateY(180deg);
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>前</div>
+        <div>后</div>
+    </div>
+</body>
+
+</html>

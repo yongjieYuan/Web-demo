@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blur Demo</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="postcard">
+      <img src="./girl.JPG" alt="girl by moto">
+    </div>
+    <div class="content z-depth-3">
+      <div class="paragraph">
+        <h4 class="flow-text text">Girls' journey is the sea of stars,not the love of the world.</h4>
+        <p class="zh_text text">少女的征途是星辰大海而并非烟尘人间。</p>
+      </div>
+      <div class="paragraph">
+        <h4 class="flow-text text">The world is suidernly late the mountains rivers sre slready autum.</h4>
+        <p class="zh_text text">人间忽晚，山河已秋。</p>
+      </div>
+      <div class="paragraph">
+        <h4 class="flow-text text">You are backlit with all the good things in this world.</h4>
+        <p class="zh_text text">你逆光而来配得上这世间所有的好。</p>
+      </div>
+      <div class="paragraph">
+        <h4 class="flow-text text">Arrogance makes others unable to love me, prejudice makes me unable to love others.
+        </h4>
+        <p class="zh_text text">傲慢让别人无法来爱我，偏见让我无法去爱别人。</p>
+      </div>
+      <div class="paragraph">
+        <h4 class="flow-text text">Some of us get dipped in flat some in satin some in gloss. But every once in a while
+          you
+          find someone who's iridescent. And when you do nothing will ever compare.</h4>
+        <p class="zh_text text">有人住高楼，有人在深沟，有人光万丈，有人一身锈，世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。</p>
+      </div>
+      <div class="paragraph">
+        <h4 class="flow-text text">Some days the sunsets would be purple and pink. And some days they were a blazing
+          orange
+          setting fire to the clouds on the horizon. It was during one of those sunsets that my father's idea of the
+          whole
+          being greater than the sum of its parts moved from my head to my heart.</h4>
+        <p class="zh_text text">有时落日泛起紫红的余晖，有时散发出橘红色的火光燃起天边的晚霞。在这绚烂的日落景象中，我慢慢领悟了父亲所说的整体胜于局部总和的道理。</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    var O_Postcard = document.querySelector(".postcard")
+    var O_Content = document.querySelector(".content")
+    O_Postcard.addEventListener("mouseover", function () {
+      O_Content.classList.add("content-trasparent")
+      O_Content.classList.remove("z-depth-3")
+      O_Postcard.classList.add("z-depth-2")
+    });
+    O_Postcard.addEventListener("mouseleave", function () {
+      O_Content.classList.add("z-depth-3")
+      O_Content.classList.remove("content-trasparent")
+      O_Postcard.classList.remove("z-depth-2")
+    });
+  </script>
+</body>
+
+</html>
+<!--
+  https://www.cnblogs.com/ivan5277/p/10007273.html
+-->

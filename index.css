@@ -1,0 +1,127 @@
+body {
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(./girl.JPG) no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 72%;
+  min-width: 200px;
+  min-height: 120px;
+  max-height: 88%;
+}
+
+.content {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/*
+1、对元素直接使用模糊会将其内容全部模糊掉，为了保证文字不会模糊掉需要多一个层单独应用模糊效果。
+2、模糊效果并不会应用到其背后的元素上，所以需要使用 content 区域有和背景相同的背景图并进行模糊。
+多一个层级的方法不通过添加元素，而通过伪元素。
+*/
+.content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -30px;
+  border-radius: 10px;
+  background: url(./girl.JPG) no-repeat center top/cover fixed;
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -ms-filter: blur(8px);
+  -o-filter: blur(8px);
+  filter: blur(8px);
+  z-index: -1;
+  transition: filter 0.4s 0.2s ease-in-out;
+}
+
+.content-trasparent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin: -30px; */
+  border-radius: 10px;
+  background: url(./girl.JPG) no-repeat center top/cover fixed;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
+  z-index: -1;
+}
+
+@media screen and (max-width: 750px) {
+  .content > .paragraph {
+    width: 90%;
+    color: #d0d0d0;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .content > .paragraph {
+    width: 70%;
+    color: #d0d0d0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content > .paragraph {
+    width: 50%;
+    color: #d0d0d0;
+  }
+}
+
+.content h4 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.zh_text {
+  font-size: 1.2rem;
+}
+
+.postcard {
+  position: absolute;
+  top: 11px;
+  right: -11px;
+  width: 16%;
+  border: 3px solid white;
+  font-size: 0;
+  transform: rotate(19deg);
+  z-index: 99;
+  transition: width 0.2s ease-in;
+}
+
+.postcard:hover {
+  width: 20%;
+}
+
+.postcard:hover + div .text {
+  text-shadow: 1px 1px 2px #333;
+}
+
+.postcard > img {
+  width: 100%;
+}
